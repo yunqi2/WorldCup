@@ -1,15 +1,58 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>首页</ion-title>
-    </ion-navbar>
-</ion-header>
+<ion-content>
 
-<ion-content padding>
-    <h2>Welcome to Ionic!</h2>
-    <p>
-        This starter project comes with simple tabs-based layout for apps that are going to primarily use a Tabbed UI.
-    </p>
-    <p>
-        Take a look at the <code>src/pages/</code> directory to add or change tabs, update any existing page or create new pages.
-    </p>
+    <ion-slides pager loop=true autoplay=2000 (ionSlideAutoplayStop)="continueToSlide()" (ionSlideTap)="goto()">
+        <ion-slide>
+            <img src="../assets/slides/slides1.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img src="../assets/slides/slides2.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img src="../assets/slides/slides3.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img src="../assets/slides/slides4.jpg" alt="">
+        </ion-slide>
+    </ion-slides>
+
+    <div class="header">
+        <i (click)="log()">
+            <img src="../assets/homeheader/header1.png" alt="">
+            <span>活动</span>
+        </i>
+        <i (click)="log()">
+            <img src="../assets/homeheader/header2.png" alt="">
+            <span>比分</span>
+        </i>
+        <i (click)="log()">
+            <img src="../assets/homeheader/header3.png" alt="">
+            <span>走势</span>
+        </i>
+        <i (click)="log()">
+            <img src="../assets/homeheader/header4.png" alt="">
+            <span>客服</span>
+        </i>
+    </div>
+
+    <div class="Transitionbar">
+        <div>
+            <i>竞技：</i>
+            <span>返奖率最高73%</span>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <span>
+                <img src="" alt="">
+                <i>竞彩足球</i>
+            </span>
+            <span>
+                <img src="" alt="">
+                <i>竞足单关</i>
+            </span>
+        </li>
+
+
+    </ul>
 </ion-content>
