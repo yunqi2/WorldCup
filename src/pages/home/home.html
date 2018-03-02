@@ -1,58 +1,201 @@
 <ion-content>
+    <!-- 顶部导航条 -->
+    <div class="navbar" #headerColor>
+        <span>中彩在线</span>
+    </div>
+    <!-- 整体的一个div 用于设置导航条的透明度 -->
+    <div #lyScroll class="scroll-content">
+        <ion-slides pager loop=true autoplay=2000 (ionSlideAutoplayStop)="continueToSlide()" (ionSlideTap)="goto()">
+            <ion-slide>
+                <img src="./assets/slides/slides1.jpg" alt="">
+            </ion-slide>
+            <ion-slide>
+                <img src="./assets/slides/slides2.jpg" alt="">
+            </ion-slide>
+            <ion-slide>
+                <img src="./assets/slides/slides3.jpg" alt="">
+            </ion-slide>
+            <ion-slide>
+                <img src="./assets/slides/slides4.jpg" alt="">
+            </ion-slide>
+        </ion-slides>
 
-    <ion-slides pager loop=true autoplay=2000 (ionSlideAutoplayStop)="continueToSlide()" (ionSlideTap)="goto()">
-        <ion-slide>
-            <img src="../assets/slides/slides1.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="../assets/slides/slides2.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="../assets/slides/slides3.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="../assets/slides/slides4.jpg" alt="">
-        </ion-slide>
-    </ion-slides>
-
-    <div class="header">
-        <i (click)="log()">
-            <img src="../assets/homeheader/header1.png" alt="">
+        <div class="header">
+            <i (click)="log()">
+            <img src="./assets/homeheader/header1.png" alt="">
             <span>活动</span>
         </i>
-        <i (click)="log()">
-            <img src="../assets/homeheader/header2.png" alt="">
+            <i (click)="log()">
+            <img src="./assets/homeheader/header2.png" alt="">
             <span>比分</span>
         </i>
-        <i (click)="log()">
-            <img src="../assets/homeheader/header3.png" alt="">
+            <i (click)="log()">
+            <img src="./assets/homeheader/header3.png" alt="">
             <span>走势</span>
         </i>
-        <i (click)="log()">
-            <img src="../assets/homeheader/header4.png" alt="">
+            <i (click)="log()">
+            <img src="./assets/homeheader/header4.png" alt="">
             <span>客服</span>
         </i>
-    </div>
-
-    <div class="Transitionbar">
-        <div>
-            <i>竞技：</i>
-            <span>返奖率最高73%</span>
         </div>
-    </div>
 
-    <ul>
-        <li>
-            <span>
-                <img src="" alt="">
+        <div class="Transitionbar">
+            <div>
+                <i>竞技：</i>
+                <span>返奖率最高73%</span>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <span (click)="goto()"> 
+                <img src="./assets/module/1-1.png" alt="">
                 <i>竞彩足球</i>
             </span>
-            <span>
-                <img src="" alt="">
+                <span>
+                <img src="./assets/module/1-2.png" alt="">
                 <i>竞足单关</i>
             </span>
-        </li>
+            </li>
+            <li>
+                <span> 
+                <img src="./assets/module/1-3.png" alt="">
+                <i>竞彩篮球</i>
+            </span>
+                <span>
+                <img src="./assets/module/1-4.png" alt="">
+                <i>北京单场</i>
+            </span>
+            </li>
+            <li>
+                <span> 
+                <img src="./assets/module/1-5.png" alt="">
+                <i>胜负14场</i>
+            </span>
+                <span>
+                <img src="./assets/module/1-6.png" alt="">
+                <i>任选9场</i>
+            </span>
+            </li>
+            <li>
+                <span> 
+                <img src="./assets/module/1-7.png" alt="">
+                <i>6场半全场</i>
+            </span>
+                <span>
+                <img src="./assets/module/1-8.png" alt="">
+                <i>四场进球彩</i>
+            </span>
+            </li>
+        </ul>
 
 
-    </ul>
+        <div class="Transitionbar">
+            <div>
+                <i>快开：</i>
+                <span>十分钟开奖 简单易中</span>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <span> 
+                    <img src="./assets/module/1-1.png" alt="">
+                    <i>竞彩足球</i>
+                </span>
+                <span>
+                    <img src="./assets/module/1-2.png" alt="">
+                    <i>竞足单关</i>
+                </span>
+            </li>
+            <li>
+                <span> 
+                    <img src="./assets/module/1-3.png" alt="">
+                    <i>竞彩篮球</i>
+                </span>
+                <span>
+                    <img src="./assets/module/1-4.png" alt="">
+                    <i>北京单场</i>
+                </span>
+            </li>
+            <li>
+                <span> 
+                    <img src="./assets/module/1-5.png" alt="">
+                    <i>胜负14场</i>
+                </span>
+                <span>
+                    <img src="./assets/module/1-6.png" alt="">
+                    <i>任选9场</i>
+                </span>
+            </li>
+            <li>
+                <span> 
+                    <img src="./assets/module/1-7.png" alt="">
+                    <i>6场半全场</i>
+                </span>
+                <span>
+                    <img src="./assets/module/1-8.png" alt="">
+                    <i>四场进球彩</i>
+                </span>
+            </li>
+            <li>
+                <span> 
+                        <img src="./assets/module/1-7.png" alt="">
+                        <i>6场半全场</i>
+                    </span>
+            </li>
+        </ul>
+
+
+        <div class="Transitionbar">
+            <div>
+                <i>数字：</i>
+                <span>以小博大 彩渲人生</span>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <span> 
+                        <img src="./assets/module/1-1.png" alt="">
+                        <i>竞彩足球</i>
+                    </span>
+                <span>
+                        <img src="./assets/module/1-2.png" alt="">
+                        <i>竞足单关</i>
+                    </span>
+            </li>
+            <li>
+                <span> 
+                        <img src="./assets/module/1-3.png" alt="">
+                        <i>竞彩篮球</i>
+                    </span>
+                <span>
+                        <img src="./assets/module/1-4.png" alt="">
+                        <i>北京单场</i>
+                    </span>
+            </li>
+            <li>
+                <span> 
+                        <img src="./assets/module/1-5.png" alt="">
+                        <i>胜负14场</i>
+                    </span>
+                <span>
+                        <img src="./assets/module/1-6.png" alt="">
+                        <i>任选9场</i>
+                    </span>
+            </li>
+            <li>
+                <span> 
+                        <img src="./assets/module/1-7.png" alt="">
+                        <i>6场半全场</i>
+                    </span>
+                <span>
+                        <img src="./assets/module/1-8.png" alt="">
+                        <i>四场进球彩</i>
+                    </span>
+            </li>
+
+        </ul>
+    </div>
 </ion-content>

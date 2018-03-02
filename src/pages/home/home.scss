@@ -1,5 +1,29 @@
 page-home {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        width: 100%;
+        height: 64px;
+        margin-top: -20px;
+        position: fixed;
+        background-color: red;
+        // z-index: 100;
+        opacity: 0;
+    }
+    .navbar span {
+        width: 100%;
+        display: block;
+        text-align: center;
+        color: black;
+        font-size: 22px;
+        margin-top: 27px;
+        color: white;
+        font-weight: 500;
+    }
     ion-slides {
+        margin-top: -20px;
         height: 170px;
     }
     .header {
@@ -13,7 +37,7 @@ page-home {
         display: block;
         float: left;
         // background-color: blue;
-        border-right: 2px solid rgba(0, 0, 0, 0.1);
+        border-right: 1.2px solid rgba(0, 0, 0, 0.1);
     }
     .header i:nth-child(4) {
         border-right: none;
@@ -22,10 +46,11 @@ page-home {
         height: 25px;
         width: 25px;
         display: block;
-        margin: 10px auto 5px;
+        margin: 8px auto 3px;
     }
     .header i span {
         font-style: normal;
+        font-weight: 500;
         display: block;
         text-align: center;
         color: green;
@@ -60,12 +85,32 @@ page-home {
         width: 100%;
         height: 60px;
         list-style: none;
-        border: solid red 1px;
+        border-bottom: 1.2px solid rgba(0, 0, 0, 0.1);
     }
     ul li span {
         width: 50%;
         height: 100%;
         float: left;
-        background-color: red;
+        display: table;
+        // background-color: red;
+    }
+    ul li span img {
+        width: 50px;
+        height: 50px;
+        display: block;
+        float: left;
+        margin-top: 5px;
+        margin-left: 20%;
+        // background-color: red;
+    }
+    ul li span i {
+        width: 60%;
+        display: table-cell;
+        vertical-align: middle;
+        // background-color: red;
+        margin-left: 20px;
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 400;
     }
 }
